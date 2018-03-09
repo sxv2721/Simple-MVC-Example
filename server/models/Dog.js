@@ -7,20 +7,20 @@ let DogModel = {};
 const DogSchema = new mongoose.Schema({
     //name(string)
     name : {
-        type : string,
+        type : String,
         required : true,
         trim : true,
         unique : true
     },
     //breed(string)
     breed : {
-        type : string,
+        type : String,
         trim : true,
         required : true
     },
     //age(number)
     age : {
-        type : number,
+        type : Number,
         required : true
     },
     //createdDate(Date)
@@ -43,5 +43,5 @@ DogSchema.statics.findByName = (name, callback) => {
 
 dogModel = mongoose.model('Dog', DogSchema);
 
-module.exports.dogModel = dogModel;
-module.exports.dogSchema = DogSchema;
+module.exports.DogModel = dogModel;
+module.exports.DogSchema = DogSchema;
