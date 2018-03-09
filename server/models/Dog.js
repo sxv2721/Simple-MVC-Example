@@ -41,7 +41,7 @@ DogSchema.statics.findByName = (name, callback) => {
     return DogModel.findOne(search, callback);
 };
 
-dogModel = mongoose.model('Dog', DogSchema);
+DogModel = mongoose.model('Dog', DogSchema);
 
-module.exports.DogModel = dogModel;
+module.exports.DogModel = DogModel;
 module.exports.DogSchema = DogSchema;
